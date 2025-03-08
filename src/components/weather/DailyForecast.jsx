@@ -17,7 +17,7 @@ const DailyForecast = () => {
             <div className="overflow-x-auto pb-2">
                 <div className="flex space-x-4">
                     {dailyForecasts.map((forecast, index) => (
-                        <div key={index} className="flex-shrink-0 w-36 bg-white/50 p-4 rounded-xl text-center">
+                        <div key={index} className="flex-shrink-0 w-39 bg-white/50 p-4 rounded-xl text-center">
                             <div className="font-semibold text-gray-700">
                                 {formatDay(forecast.dt)}
                             </div>
