@@ -6,6 +6,7 @@ import { formatDay } from '../../utils/dateUtils';
 const DailyForecast = () => {
     const { forecastData } = useWeather();
 
+    // If no forecast data, return null
     if (!forecastData) return null;
 
     const dailyForecasts = forecastData.list

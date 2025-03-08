@@ -41,11 +41,10 @@ export const WeatherProvider = ({ children }) => {
         }
     }, [location]);
 
-    // Initial load - try to get user location, fallback to default city
+    // Initial load - try to get user location
     useEffect(() => {
         handleLocationSearch();
-        // If location fails, this will be caught in the locationError and 
-        // the default city will be used in the next useEffect
+
     }, []);
 
 

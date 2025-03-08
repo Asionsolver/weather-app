@@ -7,6 +7,7 @@ export const useWeatherApi = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    // Fetch weather data by city
     const fetchWeatherByCity = async (city) => {
         setLoading(true);
         setError(null);
@@ -28,6 +29,7 @@ export const useWeatherApi = () => {
         }
     };
 
+    // Fetch weather data by coordinates
     const fetchWeatherByCoords = async (lat, lon) => {
         setLoading(true);
         setError(null);

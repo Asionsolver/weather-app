@@ -7,6 +7,7 @@ import { useWeather } from '../../hooks/useWeather';
 const CurrentWeather = () => {
     const { weatherData } = useWeather();
 
+    // If no weather data, return null
     if (!weatherData) return null;
 
     return (

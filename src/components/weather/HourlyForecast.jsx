@@ -6,6 +6,7 @@ import { formatTime } from '../../utils/dateUtils';
 const HourlyForecast = () => {
     const { forecastData } = useWeather();
 
+    // If no forecast data, return null
     if (!forecastData) return null;
 
     const hourlyForecasts = forecastData.list.slice(0, 8);

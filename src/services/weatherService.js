@@ -5,6 +5,8 @@ export const fetchWeatherByCity = async (city) => {
         throw new Error('API key is not configured');
     }
 
+
+    // Fetch weather data by city
     const response = await fetch(
         `${API_BASE_URL}/weather?q=${city}&appid=${API_KEY}&units=${UNITS}`
     );
@@ -21,6 +23,7 @@ export const fetchForecastByCity = async (city) => {
         throw new Error('API key is not configured');
     }
 
+    // Fetch forecast data by city
     const response = await fetch(
         `${API_BASE_URL}/forecast?q=${city}&appid=${API_KEY}&units=${UNITS}`
     );
@@ -37,6 +40,7 @@ export const fetchWeatherByCoords = async (lat, lon) => {
         throw new Error('API key is not configured');
     }
 
+    // Fetch weather data by coordinates
     const response = await fetch(
         `${API_BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${UNITS}`
     );
@@ -53,6 +57,7 @@ export const fetchForecastByCoords = async (lat, lon) => {
         throw new Error('API key is not configured');
     }
 
+    // Fetch forecast data by coordinates
     const response = await fetch(
         `${API_BASE_URL}/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${UNITS}`
     );

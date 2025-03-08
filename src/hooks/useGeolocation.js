@@ -5,6 +5,7 @@ export const useGeolocation = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
+    // Get user's location
     const getLocation = () => {
         if (!navigator.geolocation) {
             setError('Geolocation is not supported by your browser');
@@ -22,7 +23,7 @@ export const useGeolocation = () => {
                 });
                 setLoading(false);
             },
-            (error) => {
+            () => {
                 setError('Unable to retrieve your location. Please enable location access or search manually.');
                 setLoading(false);
             }

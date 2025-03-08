@@ -5,10 +5,12 @@ import { useWeather } from "../hooks/useWeather";
 const WeatherContent = () => {
     const { weatherLoading, weatherError } = useWeather();
 
+    // Show loading spinner if weather data is loading
     if (weatherError) {
         return <ErrorMessage message={weatherError} />;
     }
 
+    // Show loading spinner if weather data is loading
     if (weatherLoading) {
         return <LoadingSpinner />;
     }
