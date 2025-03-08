@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useWeatherApi } from '../hooks/useWeatherApi';
 import { useGeolocation } from '../hooks/useGeolocation';
-import { DEFAULT_CITY } from '../config/constants';
 import { WeatherContext } from "../context/WeatherContext";
 
 
@@ -49,12 +48,7 @@ export const WeatherProvider = ({ children }) => {
         // the default city will be used in the next useEffect
     }, []);
 
-    // Fallback to default city if location fails
-    useEffect(() => {
-        if (locationError) {
-            handleCitySearch(DEFAULT_CITY);
-        }
-    }, [locationError]);
+
 
     // Update city input when weather data changes
     useEffect(() => {
